@@ -12,7 +12,6 @@ export const LoginScreen = ({ navigation }: Props) => {
 
   const { height } = useWindowDimensions();
 
-  console.log({ apiUrl: API_URL, stage: STAGE })
 
   return (
     <Layout style={{ flex: 1}}>
