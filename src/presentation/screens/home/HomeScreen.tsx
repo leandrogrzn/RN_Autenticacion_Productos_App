@@ -1,6 +1,7 @@
 import { Layout, Text } from "@ui-kitten/components"
 import { getProductsByPage } from "../../../actions/products/get-products-by-page";
 import { useQuery } from "@tanstack/react-query";
+import { MainLayout } from "../../layouts/MainLayout";
 
 export const HomeScreen = () => {
 
@@ -13,10 +14,11 @@ export const HomeScreen = () => {
 
 
   return (
-    <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>{JSON.stringify(products, null, 2)}</Text>
-      {/* <Icon name="github-outline"/> */}
-
-    </Layout>
+    <MainLayout
+      title="TesloShop - Products"
+      subTitle="Aplicacion Administrativa"
+    >
+      <Text>hola mundo</Text>
+    </MainLayout>
   )
 }
