@@ -11,7 +11,7 @@ export const API_URL =
     : API_URL_ANDROID
 
 const tesloApi = axios.create({
-  baseURL: 'http://192.168.10.11:3000/api',
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
   }
