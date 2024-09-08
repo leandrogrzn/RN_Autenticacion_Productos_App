@@ -2,6 +2,8 @@ import { Layout, Text } from "@ui-kitten/components"
 import { getProductsByPage } from "../../../actions/products/get-products-by-page";
 import { useQuery } from "@tanstack/react-query";
 import { MainLayout } from "../../layouts/MainLayout";
+import { FullScreenLoader } from "../../components/ui/FullScreenLoader";
+import { ProductList } from "../../components/products/ProductList";
 
 export const HomeScreen = () => {
 
@@ -18,7 +20,12 @@ export const HomeScreen = () => {
       title="TesloShop - Products"
       subTitle="Aplicacion Administrativa"
     >
-      <Text>hola mundo</Text>
+      {
+        isLoading
+        ? (<FullScreenLoader/>)
+        : <ProductList products={products}/>
+      }
+
     </MainLayout>
   )
 }
