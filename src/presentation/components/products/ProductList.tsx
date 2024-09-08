@@ -8,7 +8,7 @@ import {ProductCard} from './ProductCard';
 
 interface Props {
   products: Product[];
-  fetchNextPage?: () => void;
+  fetchNextPage: () => void;
 }
 
 export const ProductList = ({products, fetchNextPage}: Props) => {
